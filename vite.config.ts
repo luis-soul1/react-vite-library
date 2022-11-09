@@ -7,10 +7,10 @@ import EsLint from 'vite-plugin-linter'
 import tsConfigPaths from 'vite-tsconfig-paths'
 const { EsLinter, linterPlugin } = EsLint
 import * as packageJson from './package.json'
-// https://vitejs.dev/config/
+
 export default defineConfig((configEnv) => ({
   plugins: [
-    react(),
+    react({ jsxRuntime: 'classic' }),
     tsConfigPaths(),
     linterPlugin({
       include: ['./src}/**/*.{ts,tsx}'],
