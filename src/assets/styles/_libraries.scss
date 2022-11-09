@@ -1,0 +1,31 @@
+//Progress bar
+.react-sweet-progress-line-inner-status-active:before {
+  animation: none !important;
+}
+
+//React PDF
+.rpv-core__textbox {
+  border: 1px solid black;
+  border-radius: 6px;
+  margin-top: 5px;
+  padding: 0 8px;
+}
+
+.rpv-core__primary-button {
+  border: 1px solid black;
+  border-radius: 6px;
+  margin-top: 5px;
+  padding: 0 8px;
+}
+
+.rpv-core__inner-pages {
+  overflow: unset !important;
+}
+
+.rpv-core__page-layer {
+  margin: auto;
+}
+
+.rpv-core__text-layer {
+  display: none !important;
+}

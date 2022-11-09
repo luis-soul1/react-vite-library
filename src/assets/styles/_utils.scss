@@ -1,0 +1,31 @@
+.slider {
+  display: flex;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  overflow: auto;
+}
+
+.slider-item {
+  flex: none;
+}
+
+@mixin no-scroll-bar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.no-scroll-bar {
+  @include no-scroll-bar;
+}
+
+.no-mobile-scroll-bar {
+  @include breakpoint(mobile) {
+    @include no-scroll-bar;
+  }
+}
+
+.total-center {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}

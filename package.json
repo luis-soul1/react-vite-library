@@ -1,14 +1,10 @@
 {
   "name": "react-vite-library",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.5",
   "type": "module",
   "keywords": [],
-  "author": "bigyan poudel",
-  "bugs": {
-    "url": "https://github.com/bigyanpoudel/react-vite-library/issues"
-  },
-  "homepage": "https://github.com/bigyanpoudel/react-vite-library#readme",
+  "author": "Luis Ramos",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
@@ -21,7 +17,8 @@
   "exports": {
     ".": {
       "import": "./dist/react-vite-library.es.js",
-      "require": "./dist/react-vite-library.umd.js"
+      "require": "./dist/react-vite-library.umd.js",
+      "style": "./dist/style.css"
     }
   },
   "repository": {
@@ -29,24 +26,35 @@
     "url": "https://github.com/luis-soul1/react-vite-library"
   },
   "files": [
-    "dist"
+    "dist",
+    "dist/*.css"
   ],
   "main": "./dist/react-vite-library.umd.js",
   "module": "./dist/react-vite-library.es.js",
   "types": "./dist/index.d.ts",
   "peerDependencies": {
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "dependencies": {
+    "@emotion/react": "11.10.5",
+    "@emotion/styled": "11.10.5",
+    "@mui/icons-material": "5.10.9",
+    "@mui/lab": "5.0.0-alpha.107",
+    "@mui/material": "5.10.13",
+    "@mui/x-date-pickers": "5.0.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-iconly": "^2.2.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
-    "@vitejs/plugin-react": "^2.2.0",
-    "eslint": "^8.27.0",
-    "typescript": "^4.6.4",
-    "vite": "^3.2.3",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
+    "@vitejs/plugin-react": "^2.2.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.27.0",
     "eslint-config-next": "12.0.7",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard-with-typescript": "^21.0.1",
@@ -57,12 +65,15 @@
     "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-tailwindcss": "^3.6.2",
-    "vite-plugin-dts": "^1.4.1",
-    "vite-plugin-linter": "^1.2.0",
-    "vite-tsconfig-paths": "^3.5.0",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.12",
-    "tailwindcss": "^3.0.7"
+    "sass": "^1.45.1",
+    "tailwindcss": "^3.0.7",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.3",
+    "vite-plugin-dts": "^1.4.1",
+    "vite-plugin-linter": "^1.2.0",
+    "vite-tsconfig-paths": "^3.5.0"
   }
 }

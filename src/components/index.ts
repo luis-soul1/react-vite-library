@@ -1,1 +1,6 @@
-export { default as Button } from "./Button";
+export { default as PdvButton } from './PdvButton'
+export { default as CustomButton } from './CustomButton'
+export type { TColors } from './Colors/TColors'
+export { default as PdvIcon } from './Icons'
+export type { TIconNames } from './Icons/TIconNames'
+import '../assets/styles/index.scss'

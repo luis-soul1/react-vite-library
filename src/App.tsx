@@ -1,32 +1,33 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+
+import CustomButton from './components/CustomButton'
+import PdvButton from './components/PdvButton'
+// import PdvButton from './components/PdvButton/PdvButton'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
+    <div className="w-full7xl flex h-screen flex-col items-center justify-center bg-slate-900 p-8 text-center">
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
+          Logo
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+      <div className="p-4">
+        <CustomButton onClick={() => setCount((count) => count + 1)}>count is {count}</CustomButton>
+        <PdvButton color="green-700" onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </button>
+        </PdvButton>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <p className="text-gray-400">Click on the Vite and React logos to learn more</p>
     </div>
   )
 }

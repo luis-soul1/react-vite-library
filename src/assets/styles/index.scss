@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './libraries.scss';
+@import './breakpoints.scss';
+@import './colors.scss';
+@import './html-core.scss';
+@import './utils.scss';
+@import './configs.scss';
+
+.test {
+  padding: 4rem;
+  background-color: red;
+}
