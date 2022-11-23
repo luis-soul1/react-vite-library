@@ -1,3 +1,27 @@
+// React slick
+.slick-track {
+  padding-bottom: 10px !important;
+}
+
+.slick-dots {
+  position: relative !important;
+  top: -1rem !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.dots-size {
+  li {
+    width: fit-content !important;
+    margin: 0 5px !important;
+  }
+}
+
+//Progress bar
+.react-sweet-progress-line-inner-status-active:before {
+  animation: none !important;
+}
+
 .slider {
   display: flex;
   width: 100%;

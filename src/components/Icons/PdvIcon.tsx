@@ -1,4 +1,5 @@
 import { CSSProperties, FC } from 'react'
+
 import { Iconly } from 'react-iconly'
 
 import { TColors } from '../Colors/TColors'
@@ -44,3 +45,5 @@ export const PdvIcon: FC<TPdvIcon> = (props) => {
     </>
   )
 }
+
+export default PdvIcon

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-import CustomButton from './components/CustomButton'
 import PdvButton from './components/PdvButton'
 // import PdvButton from './components/PdvButton/PdvButton'
 
@@ -19,7 +18,6 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="p-4">
-        <CustomButton onClick={() => setCount((count) => count + 1)}>count is {count}</CustomButton>
         <PdvButton color="green-700" onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </PdvButton>
