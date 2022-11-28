@@ -4,6 +4,8 @@
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -13,15 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "declaration": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "declarationMap": true,
-    "baseUrl": ".",
-    "paths": {
-      "react-vite-library": ["src/components/index.ts"]
-    },
-    "typeRoots": ["node_modules/@types", "src/components/index.d.ts"]
+    "jsxImportSource": "@emotion/react"
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
