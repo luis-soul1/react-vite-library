@@ -10,7 +10,7 @@ const CustomButton = (props: CustomButtonProps) => {
     <MuiButton
       onClick={props?.onClick}
       variant="contained"
-      className="bg-orange-600 shadow-md hover:bg-slate-200 transition-colors"
+      className="bg-orange-600 shadow-md transition-colors hover:bg-slate-200"
     >
       {props.children}
     </MuiButton>
