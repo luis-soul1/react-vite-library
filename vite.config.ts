@@ -10,11 +10,14 @@ const { EsLinter, linterPlugin } = EsLint
 import * as packageJson from './package.json'
 
 export default defineConfig((configEnv) => {
-  // process.env = Object.assign(process.env, loadEnv(configEnv.mode, process.cwd(), ''))
-
   return {
     plugins: [
-      react({ jsxRuntime: 'classic' }),
+      react({
+        jsxImportSource: '@emotion/react',
+        babel: {
+          plugins: ['@emotion/babel-plugin']
+        }
+      }),
       tsConfigPaths(),
       linterPlugin({
         include: ['./src}/**/*.{ts,tsx}'],
@@ -25,6 +28,7 @@ export default defineConfig((configEnv) => {
       })
     ],
     build: {
+      minify: false,
       lib: {
         entry: resolve('src', 'components/index.ts'),
         name: 'ReactViteLibrary',
@@ -32,6 +36,16 @@ export default defineConfig((configEnv) => {
         fileName: (format) => `react-vite-library.${format}.js`
       },
       rollupOptions: {
+        output: {
+          globals: {
+            react: 'React',
+            'react-dom': 'ReactDOM',
+            '@emotion/styled': 'styled',
+            '@emotion/react': 'React',
+            '@mui/material': 'MaterialUI',
+            'react-iconly': 'Iconly'
+          }
+        },
         external: [...Object.keys(packageJson.peerDependencies)]
       }
     }

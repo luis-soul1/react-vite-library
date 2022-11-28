@@ -32,6 +32,7 @@ module.exports = {
     'prettier',
     'plugin:tailwindcss/recommended'
   ],
+  ignorePatterns: ['**/dist/*.js'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     tsconfigRootDir: __dirname,

@@ -33,8 +33,15 @@
   "module": "./dist/react-vite-library.es.js",
   "types": "./dist/index.d.ts",
   "peerDependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@emotion/react": "11.10.5",
+    "@emotion/styled": "11.10.5",
+    "@mui/icons-material": "5.10.9",
+    "@mui/lab": "5.0.0-alpha.107",
+    "@mui/material": "5.10.13",
+    "@mui/x-date-pickers": "5.0.7",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-iconly": "^2.2.5"
   },
   "dependencies": {
     "@emotion/react": "11.10.5",
@@ -43,13 +50,14 @@
     "@mui/lab": "5.0.0-alpha.107",
     "@mui/material": "5.10.13",
     "@mui/x-date-pickers": "5.0.7",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-iconly": "^2.2.5"
   },
   "devDependencies": {
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
+    "@emotion/babel-plugin": "^11.10.5",
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
     "@vitejs/plugin-react": "^2.2.0",
@@ -73,6 +81,7 @@
     "typescript": "^4.6.4",
     "vite": "^3.2.3",
     "vite-plugin-dts": "^1.4.1",
+    "vite-plugin-externalize-deps": "^0.4.0",
     "vite-plugin-linter": "^1.2.0",
     "vite-tsconfig-paths": "^3.5.0"
   }

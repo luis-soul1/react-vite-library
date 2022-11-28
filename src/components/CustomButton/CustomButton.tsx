@@ -1,3 +1,4 @@
+import { Button } from '@mui/material'
 import React from 'react'
 
 type CustomButtonProps = {
@@ -6,13 +7,10 @@ type CustomButtonProps = {
   onClick?: () => void
   type?: 'submit' | 'button' | 'reset'
 }
+
 const CustomButton = (props: CustomButtonProps) => {
-  const { children, className, onClick, type = 'button' } = props
-  return (
-    <button className={`${className} rounded-md bg-green-700 p-2 text-white hover:bg-blue-400`} type={type} onClick={onClick}>
-      {children}
-    </button>
-  )
+  console.info({ props })
+  return <Button variant="contained">Contained</Button>
 }
 
 export default CustomButton

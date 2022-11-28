@@ -3608,6 +3608,11 @@ vite-plugin-dts@^1.4.1:
     kolorist "^1.6.0"
     ts-morph "^16.0.0"
 
+vite-plugin-externalize-deps@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-externalize-deps/-/vite-plugin-externalize-deps-0.4.0.tgz#103f7fdd3e40ec32f3b8b55744558785694b6581"
+  integrity sha512-FW5xc+pbvooLhRe+2JuGX/AdXi3TYRclwvVuczrF51UZ2BFLYH00953LnOon7bb2GeOSkocT+mvQ+Az/V6PPUA==
+
 vite-plugin-linter@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/vite-plugin-linter/-/vite-plugin-linter-1.2.0.tgz#f0cc1bfd98431976b5e035df7502c8338834ec3e"
