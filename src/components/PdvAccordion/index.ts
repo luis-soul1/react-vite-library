@@ -1,0 +1,1 @@
+export { PdvAccordion } from './PdvAccordion'

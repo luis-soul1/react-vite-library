@@ -10,6 +10,10 @@
       "import": "./dist/index.js",
       "require": "./dist/index.js"
     },
+    "./PdvButton": {
+      "import": "./dist/components/PdvButton/components/PdvButton/PdvButton.js",
+      "require": "./dist/components/PdvButton/components/PdvButton/PdvButton.js"
+    },
     "./dist/style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"

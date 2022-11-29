@@ -1,9 +1,9 @@
 import { Button } from '@mui/material'
-import { /*  ReactElement,  */ ElementType } from 'react'
+import { ReactElement, ElementType } from 'react'
 
-import { TColors } from './Colors/TColors'
-// import { PdvIcon, TIconSize } from "./Icons/PdvIcon";
-// import { TIconNames } from "./Icons/TIconNames";
+import { TColors } from '../Colors/TColors'
+import { PdvIcon, TIconSize } from '../Icons/PdvIcon'
+import { TIconNames } from '../Icons/TIconNames'
 
 type TRounded = 'small' | 'medium' | 'large' | 'full'
 export type TButtonVariant = 'contained' | 'outlined' | 'default'
@@ -19,9 +19,9 @@ type TPdvButton = {
   asLink?: boolean
   href?: string
   type?: 'submit' | 'button' | 'reset'
-  // icon?: TIconNames | ReactElement;
+  icon?: TIconNames | ReactElement
   iconPosition?: 'left' | 'right'
-  // iconSize?: TIconSize;
+  iconSize?: TIconSize
   disabled?: boolean
   rounded?: TRounded
   component?: ElementType
@@ -53,11 +53,11 @@ const PdvButton = (props: TPdvButton) => {
     variant = 'contained',
     asLink,
     href,
-    // iconSize,
-    // iconPosition = "left",
+    iconSize,
+    iconPosition = 'left',
     disabled = false,
     color = 'primary-color',
-    // iconColor = "white",
+    iconColor = 'white',
     rounded = 'medium',
     textColor,
     ...rest
@@ -79,19 +79,13 @@ const PdvButton = (props: TPdvButton) => {
     }
   }
 
-  // const setIcon = () => {
-  //   if (typeof props.icon === "string") {
-  //     const selectedColor = props.disabled ? "gray-500" : iconColor;
-  //     return (
-  //       <PdvIcon
-  //         name={props.icon}
-  //         color={props.variant === "outlined" ? color : selectedColor}
-  //         size={props.iconSize ?? "medium"}
-  //       />
-  //     );
-  //   }
-  //   return props.icon;
-  // };
+  const setIcon = () => {
+    if (typeof props.icon === 'string') {
+      const selectedColor = props.disabled ? 'gray-500' : iconColor
+      return <PdvIcon name={props.icon} color={props.variant === 'outlined' ? color : selectedColor} size={props.iconSize ?? 'medium'} />
+    }
+    return props.icon
+  }
 
   const onClick = () => {
     props?.onClick && props.onClick()
@@ -108,9 +102,9 @@ const PdvButton = (props: TPdvButton) => {
         onClick={onClick}
       >
         <div className="flex items-center justify-center gap-1.5">
-          {/* {iconPosition === "left" && props?.icon && setIcon()} */}
+          {iconPosition === 'left' && props?.icon && setIcon()}
           <h6 className={`flex items-center ${props.size?.includes('small') ? 'subtitle2' : 'subtitle1'}`}>{children}</h6>
-          {/* {iconPosition === "right" && props?.icon && setIcon()} */}
+          {iconPosition === 'right' && props?.icon && setIcon()}
         </div>
       </Button>
     </span>

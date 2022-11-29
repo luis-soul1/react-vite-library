@@ -1,7 +1,8 @@
-import { dirname, resolve } from 'path'
+import { dirname, resolve, relative, join } from 'path'
 import { fileURLToPath } from 'url'
 
 import react from '@vitejs/plugin-react'
+import glob from 'glob'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import EsLint from 'vite-plugin-linter'
@@ -51,7 +52,20 @@ export default defineConfig((configEnv) => {
         fileName: 'index'
       },
       rollupOptions: {
-        external: externals
+        external: externals,
+        input: glob.sync(resolve(__dirname, 'src/**/*.ts')),
+        output: {
+          preserveModules: true,
+          entryFileNames: (entry) => {
+            const { name, facadeModuleId } = entry
+            const fileName = `${name}.js`
+            if (!facadeModuleId) {
+              return fileName
+            }
+            const relativeDir = relative(resolve(__dirname, 'src'), dirname(facadeModuleId))
+            return join(relativeDir, fileName)
+          }
+        }
       }
     }
   }
