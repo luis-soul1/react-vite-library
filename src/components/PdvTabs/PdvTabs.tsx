@@ -1,6 +1,6 @@
 import { useState, Children, cloneElement, useEffect } from 'react'
 
-import { TColors } from '../Colors/TColors'
+import { TColors } from '../Colors'
 import { PdvIcon } from '../Icons/PdvIcon'
 import { TIconNames } from '../Icons/TIconNames'
 import { PdvButton, TButtonSize } from '../PdvButton'

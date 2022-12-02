@@ -1,7 +1,6 @@
 // Components
-export { Button } from './Button'
-export { CustomButton } from './CustomButton'
-export { PdvIcon } from './components/Icons/PdvIcon'
+export { PdvIcon, iconNames, MuiIconsList } from './components/Icons'
+export type { TIconNames, MuiIcons } from './components/Icons'
 export { PdvButton } from './components/PdvButton'
 export { PdvSkeleton } from './components/PdvSkeleton'
 export { PdvPillBox } from './components/PdvPillBox'
@@ -19,7 +18,12 @@ export { PdvTooltip } from './components/PdvTooltip'
 export { PdvTabs } from './components/PdvTabs'
 export { PdvTopHeaderCard } from './components/PdvTopHeaderCard'
 export { PdvLoader, Loader } from './components/PdvLoader'
-export { PdvGallery, PdvGalleryItem } from './components/PdvGallery'
+export { PdvDatatable } from './components/PdvDatatable'
+export type { IColumns, IExpandedRows } from './components/PdvDatatable'
+
+// Colors & Types
+export type { TColors } from './components/Colors'
+export { tailwindColors } from './components/Colors'
 
 // Inputs
 export { InputField, Input } from './components/Forms/Input'

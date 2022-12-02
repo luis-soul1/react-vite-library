@@ -1,2 +1,4 @@
-export { PdvButton } from './PdvButton'
-export type { TButtonVariant, TButtonSize } from './PdvButton'
+
+export {default} from './PdvButton'
+
+export * from './PdvButton'

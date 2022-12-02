@@ -1,7 +1,7 @@
 // @ts-expect-error: Unreachable code error
 import { Progress } from 'react-sweet-progress'
 
-import { TColors } from '../Colors/TColors'
+import { TColors } from '../Colors'
 
 import 'react-sweet-progress/lib/style.css'
 

@@ -1,5 +1,6 @@
-import { Button } from '@mui/material'
-import { ReactElement, ElementType } from 'react'
+import { LoadingButton } from '@mui/lab'
+import { Button, CircularProgress } from '@mui/material'
+import { ReactElement, ElementType, ReactNode } from 'react'
 
 import { TColors } from '../Colors/TColors'
 import { PdvIcon, TIconSize } from '../Icons/PdvIcon'
@@ -9,20 +10,19 @@ type TRounded = 'small' | 'medium' | 'large' | 'full'
 export type TButtonVariant = 'contained' | 'outlined' | 'default'
 export type TButtonSize = 'small' | 'medium' | 'large'
 type TPdvButton = {
-  children: React.ReactNode | React.ReactNode[]
+  children?: ReactNode | ReactNode[]
   className?: string
   variant?: TButtonVariant
   color?: TColors
   textColor?: TColors
   iconColor?: TColors
   size?: TButtonSize
-  asLink?: boolean
-  href?: string
   type?: 'submit' | 'button' | 'reset'
   icon?: TIconNames | ReactElement
   iconPosition?: 'left' | 'right'
   iconSize?: TIconSize
   disabled?: boolean
+  loading?: boolean
   rounded?: TRounded
   component?: ElementType
   onClick?: () => void
@@ -46,14 +46,13 @@ const roundedStyle = (rounded: TRounded) => {
   return dispatch[rounded]
 }
 
-const PdvButton = (props: TPdvButton) => {
+export const PdvButton = (props: TPdvButton) => {
   const {
     children,
     className,
     variant = 'contained',
-    asLink,
-    href,
     iconSize,
+    loading,
     iconPosition = 'left',
     disabled = false,
     color = 'primary-color',
@@ -66,29 +65,46 @@ const PdvButton = (props: TPdvButton) => {
   const sx = { ...defaultSx, borderRadius: roundedStyle(rounded) }
 
   const selectedTextColor = () => {
-    if (variant === 'contained') return textColor ? `var(--${String(textColor)})` : 'var(--white)'
-    return textColor ? `var(--${String(textColor)})` : `var(--${String(props.color)})`
+    if (variant === 'contained') return textColor ? `var(--${textColor})` : 'var(--white)'
+    return textColor ? `var(--${textColor})` : `var(--${props.color})`
   }
 
   const style = () => {
     return {
-      backgroundColor: variant === 'contained' ? `var(--${String(color)})` : 'var(--transparent)',
+      backgroundColor: variant === 'contained' ? `var(--${color})` : 'var(--transparent)',
       color: selectedTextColor(),
-      border: variant === 'outlined' ? `1px solid var(--${String(color)})` : 'none',
+      border: variant === 'outlined' ? `1px solid var(--${color})` : 'none',
       boxShadow: props.disabled || variant === 'default' ? 'none' : `var(--shadow-medium)`
     }
   }
 
   const setIcon = () => {
+    if (!props.icon) return
     if (typeof props.icon === 'string') {
       const selectedColor = props.disabled ? 'gray-500' : iconColor
-      return <PdvIcon name={props.icon} color={props.variant === 'outlined' ? color : selectedColor} size={props.iconSize ?? 'medium'} />
+      return <PdvIcon name={props.icon} color={props.variant === 'outlined' ? color : selectedColor} size={props.iconSize ?? props.size} />
     }
     return props.icon
   }
 
   const onClick = () => {
     props?.onClick && props.onClick()
+  }
+
+  if (loading) {
+    return (
+      <LoadingButton
+        loading={loading}
+        className={`${className ?? ''} ${structure} ${disabled ? disabledStyles : ''}`}
+        {...rest}
+        loadingIndicator={<CircularProgress className="text-white" size={14} />}
+        sx={sx}
+        style={{ ...style() }}
+        disabled={disabled}
+      >
+        <span className="invisible">{children}</span>
+      </LoadingButton>
+    )
   }
 
   return (
@@ -101,14 +117,14 @@ const PdvButton = (props: TPdvButton) => {
         disabled={disabled}
         onClick={onClick}
       >
-        <div className="flex items-center justify-center gap-1.5">
-          {iconPosition === 'left' && props?.icon && setIcon()}
+        <div className={`total-center ${props.size === 'small' ? 'gap-0.5' : 'gap-1.5'}`}>
+          {iconPosition === 'left' && setIcon()}
           <h6 className={`flex items-center ${props.size?.includes('small') ? 'subtitle2' : 'subtitle1'}`}>{children}</h6>
-          {iconPosition === 'right' && props?.icon && setIcon()}
+          {iconPosition === 'right' && setIcon()}
         </div>
       </Button>
     </span>
   )
 }
 
-export { PdvButton }
+export default PdvButton

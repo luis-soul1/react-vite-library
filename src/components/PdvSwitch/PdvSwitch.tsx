@@ -1,7 +1,7 @@
 import { Switch as MUISwitch, styled } from '@mui/material'
 import { useState } from 'react'
 
-import { TColors } from '../Colors/TColors'
+import { TColors } from '../Colors'
 
 type TSwitchProps = {
   suffixText?: {

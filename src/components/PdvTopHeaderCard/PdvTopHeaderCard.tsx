@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 
-import { TColors } from '../Colors/TColors'
+import { TColors } from '../Colors'
 
 type TPdvTopHeaderCard = {
   children?: React.ReactNode[] | React.ReactNode

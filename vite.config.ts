@@ -44,10 +44,10 @@ export default defineConfig((configEnv) => {
       })
     ],
     build: {
-      minify: false,
+      // minify: false,
       lib: {
         entry: resolve(__dirname, 'src/index.ts'),
-        name: 'MyLib',
+        name: 'PdvUikit',
         formats: ['es'],
         fileName: 'index'
       },

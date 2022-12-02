@@ -1,7 +1,7 @@
 import { Collapse } from '@mui/material'
 import { ReactElement, useState, Children, cloneElement } from 'react'
 
-import { TColors } from '../Colors/TColors'
+import { TColors } from '../Colors'
 import { PdvIcon } from '../Icons/PdvIcon'
 import { TIconNames } from '../Icons/TIconNames'
 

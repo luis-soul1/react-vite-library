@@ -2,7 +2,7 @@ import { Divider, FormControlLabel, Radio, RadioGroup } from '@mui/material'
 import { ReactElement, Fragment } from 'react'
 import { Controller, FieldValues, Path, RegisterOptions, UseFormReturn } from 'react-hook-form'
 
-import { TColors } from '../../Colors/TColors'
+import { TColors } from '../../Colors'
 
 type TRadioGroupField<TFormValues extends FieldValues> = {
   name: Path<TFormValues>

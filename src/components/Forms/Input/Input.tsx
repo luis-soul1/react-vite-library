@@ -2,7 +2,7 @@ import { Input as MuiInput } from '@mui/material'
 import { forwardRef } from 'react'
 import { Controller, ControllerRenderProps, FieldValues, Path, RegisterOptions, UseFormReturn } from 'react-hook-form'
 
-import { TColors } from '../../Colors/TColors'
+import { TColors } from '../../Colors'
 import { PdvIcon } from '../../Icons/PdvIcon'
 import { TIconNames } from '../../Icons/TIconNames'
 

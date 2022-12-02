@@ -1,6 +1,6 @@
 import { Tooltip, TooltipProps, tooltipClasses, styled } from '@mui/material'
 
-import { TColors } from '../Colors/TColors'
+import { TColors } from '../Colors'
 
 export type PdvTooltipPlacements = TooltipProps['placement']
 

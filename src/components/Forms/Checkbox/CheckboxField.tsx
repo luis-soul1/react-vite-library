@@ -2,7 +2,7 @@ import { Checkbox, IconButton, styled } from '@mui/material'
 import { ChangeEvent, InputHTMLAttributes } from 'react'
 import { Controller, ControllerRenderProps, FieldValues, Path, RegisterOptions, UseFormReturn } from 'react-hook-form'
 
-import { TColors } from '../../Colors/TColors'
+import { TColors } from '../../Colors'
 
 type TCheckboxProps<TFormValues extends FieldValues> = {
   name: Path<TFormValues>

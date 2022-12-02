@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 
-import { TColors } from '../Colors/TColors'
+import { TColors } from '../Colors'
 
 type TheaderSize = 'small' | 'medium' | 'large' | 'half' | string | number
 

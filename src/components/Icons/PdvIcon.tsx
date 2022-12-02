@@ -1,7 +1,7 @@
 import { CSSProperties, FC } from 'react'
 import { Iconly } from 'react-iconly'
 
-import { TColors } from '../Colors/TColors'
+import { TColors } from '../Colors'
 import { MuiIcons, muiSize } from './MuiIcons'
 import { TIconNames } from './TIconNames'
 

@@ -1,7 +1,7 @@
 import { Select as MuiSelect, SelectChangeEvent, MenuItem, Box } from '@mui/material'
 import { Controller, FieldValues, Path, RegisterOptions, UseFormReturn } from 'react-hook-form'
 
-import { TColors } from '../../Colors/TColors'
+import { TColors } from '../../Colors'
 import { PdvIcon } from '../../Icons/PdvIcon'
 
 export type TSelectProps<TSelectOptions, TFormValues extends FieldValues> = {

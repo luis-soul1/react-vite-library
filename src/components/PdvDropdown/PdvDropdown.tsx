@@ -1,7 +1,7 @@
 import { ButtonGroup, ClickAwayListener, Grow, MenuItem, MenuList, Paper, Popper } from '@mui/material'
 import { useState, useRef, PropsWithChildren, cloneElement, Children } from 'react'
 
-import { TColors } from '../Colors/TColors'
+import { TColors } from '../Colors'
 import { PdvIcon } from '../Icons/PdvIcon'
 import { PdvButton, TButtonSize, TButtonVariant } from '../PdvButton'
 

@@ -24,7 +24,18 @@ import {
   SchoolRounded,
   SentimentSatisfiedOutlined,
   SentimentVerySatisfiedOutlined,
-  SentimentVerySatisfiedRounded
+  SentimentVerySatisfiedRounded,
+  NotificationsNoneRounded,
+  CheckCircleOutlineRounded,
+  CheckCircleRounded,
+  RemoveCircleOutlineOutlined,
+  RemoveCircleOutlined,
+  UnfoldMore,
+  CompareArrowsRounded,
+  LocationOnOutlined,
+  WindowOutlined,
+  RemoveOutlined,
+  Circle
 } from '@mui/icons-material'
 import { SvgIconTypeMap } from '@mui/material'
 import { OverridableComponent } from '@mui/material/OverridableComponent'
@@ -55,7 +66,19 @@ export const MuiIconsList = {
   KeyArrowUpFill: ArrowDropUpRounded,
   KeyArrowDownFill: ArrowDropDownRounded,
   Refresh: ReplayRounded,
-  SchoolHat: SchoolRounded
+  SchoolHat: SchoolRounded,
+  Bell: NotificationsNoneRounded,
+  CheckCircleOutlined: CheckCircleOutlineRounded,
+  CheckCircle: CheckCircleRounded,
+  RemoveCircleOutlined: RemoveCircleOutlineOutlined,
+  RemoveCircle: RemoveCircleOutlined,
+  Sort: UnfoldMore,
+  CompareArrow: CompareArrowsRounded,
+  location: LocationOnOutlined,
+  Window: WindowOutlined,
+  Remove: RemoveOutlined,
+  Circle: Circle
+
 }
 
 export const MuiIcons: Record<string, OverridableComponent<SvgIconTypeMap<unknown, 'svg'>>> = MuiIconsList

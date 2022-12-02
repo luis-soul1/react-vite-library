@@ -1,7 +1,7 @@
 import { Pagination, PaginationItem } from '@mui/material'
 import { Fragment } from 'react'
 
-import { TColors } from '../Colors/TColors'
+import { TColors } from '../Colors'
 
 type TPdvPagination = {
   count: number

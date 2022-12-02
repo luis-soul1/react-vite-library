@@ -1,4 +1,4 @@
-import { TColors } from '../../Colors/TColors'
+import { TColors } from '../../Colors'
 import { PdvIcon, TIconSize } from '../../Icons/PdvIcon'
 import { TIconNames } from '../../Icons/TIconNames'
 

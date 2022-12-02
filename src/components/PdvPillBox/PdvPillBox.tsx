@@ -1,4 +1,4 @@
-import { TColors } from '../Colors/TColors'
+import { TColors } from '../Colors'
 
 type TPdvPillBox = {
   children: React.ReactNode | React.ReactNode[]

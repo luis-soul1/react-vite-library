@@ -1,8 +1,11 @@
 {
-  "name": "mui-test-lib",
+  "name": "@pdv/uikit",
   "private": false,
-  "version": "0.0.18",
+  "version": "1.0.0",
   "type": "module",
+  "author": "PDV Frontend Team",
+  "description": "React components that implement MUI.",
+  "license": "UNLICENSED",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "exports": {

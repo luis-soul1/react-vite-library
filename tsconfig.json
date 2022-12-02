@@ -19,7 +19,7 @@
     "declarationMap": true,
     "declaration": true,
     "jsxImportSource": "@emotion/react",
-    "typeRoots": ["node_modules/@types", "src/index.d.ts"]
+    "typeRoots": ["node_modules/@types", "src/index.d.ts", "src/assets/images/images.d.ts"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

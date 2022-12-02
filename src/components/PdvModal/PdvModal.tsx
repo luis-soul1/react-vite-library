@@ -2,7 +2,7 @@ import { Dialog, Divider, Slide, styled } from '@mui/material'
 import { TransitionProps } from '@mui/material/transitions'
 import { forwardRef } from 'react'
 
-import { TColors } from '../Colors/TColors'
+import { TColors } from '../Colors'
 
 type TPdvModal = {
   children: React.ReactNode | React.ReactNode[]
@@ -16,9 +16,9 @@ type TPdvModal = {
   onClose?: () => void
 }
 
-type TPdvModalFooter = {
-  Footer: React.FC<TFooter>
-}
+// type TPdvModalFooter = {
+//   Footer: React.FC<TFooter>
+// }
 
 type TFooter = {
   children: React.ReactNode | React.ReactNode[]
@@ -46,7 +46,7 @@ const Transition = forwardRef(function Transition(
   return <Slide direction="up" ref={ref} {...props} />
 })
 
-const PdvModal = (props: TPdvModal & TPdvModalFooter) => {
+const PdvModal = (props: TPdvModal) => {
   const { headerColor = 'primary-color' } = props
   const fullScreenStyles = props.fullScreen ? '' : 'rounded-t-[1rem]'
   const modalPadding = props.noContainerSpacing ? '' : 'md:px-6 px-4 md:pt-6 pt-4'
