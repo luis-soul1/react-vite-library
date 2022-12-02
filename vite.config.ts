@@ -1,4 +1,4 @@
-import { dirname, resolve, relative, join } from 'path'
+import { dirname, resolve /* , relative, join  */ } from 'path'
 import { fileURLToPath } from 'url'
 
 import react from '@vitejs/plugin-react'
@@ -54,18 +54,21 @@ export default defineConfig((configEnv) => {
       rollupOptions: {
         external: externals,
         input: glob.sync(resolve(__dirname, 'src/**/*.ts')),
-        output: {
-          preserveModules: true,
-          entryFileNames: (entry) => {
-            const { name, facadeModuleId } = entry
-            const fileName = `${name}.js`
-            if (!facadeModuleId) {
-              return fileName
-            }
-            const relativeDir = relative(resolve(__dirname, 'src'), dirname(facadeModuleId))
-            return join(relativeDir, fileName)
-          }
-        }
+        plugins: []
+        // output: {
+        //   preserveModules: true,
+        //   entryFileNames: (entry) => {
+        //     const { name, facadeModuleId } = entry
+        //     console.log({ entry })
+
+        //     const fileName = `${name}.js`
+        //     if (!facadeModuleId || facadeModuleId.includes('node_modules')) {
+        //       return fileName
+        //     }
+        //     const relativeDir = relative(resolve(__dirname, 'src'), dirname(facadeModuleId))
+        //     return join(relativeDir, fileName)
+        //   }
+        // }
       }
     }
   }
